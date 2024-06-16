@@ -96,6 +96,12 @@ def chooseRandomMoveFromList(board, movesList):
         return random.choice(possibleMoves)
     else:
         return None
+    
+def isBoardFull(board):
+    for i in range(1, 10):
+        if isSpaceFree(board, i):
+            return False
+    return True
 
 while True:
     theBoard = [' '] * 10
