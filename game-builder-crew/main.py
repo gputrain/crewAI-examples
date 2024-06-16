@@ -38,12 +38,11 @@ crew = Crew(
 	verbose=True
 )
 
-game = crew.kickoff()
+if __name__ == "__main__":
+	game = crew.kickoff()
 
+	with open("game.py", "w") as file:
+		file.write(game)
 
-# Print results
-print("\n\n########################")
-print("## Here is the result")
-print("########################\n")
-print("final code for the game:")
-print(game)
+	print ('complete')    
+
